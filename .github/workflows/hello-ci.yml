@@ -8,6 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run Tests
-        run: pytest
+        run: python3 test_calc.py
 
 
