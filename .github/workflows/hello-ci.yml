@@ -1,5 +1,7 @@
-jobs:
+name : python runtest
 on: [push]
+
+jobs:
   test:
     runs-on: ubuntu-latest
     steps:
