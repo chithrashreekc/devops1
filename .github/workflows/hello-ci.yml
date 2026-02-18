@@ -1,11 +1,19 @@
-name : python runtest
+name: hello-ci
+
 on: [push]
 
 jobs:
-  test:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run test
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install pytest
+        run: pip install pytest
+      - name: Run Tests
         run: pytest
+
 
