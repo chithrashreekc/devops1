@@ -1,12 +1,9 @@
-
-name: Run python test
-on: [push]
-
 jobs:
-  say-hello:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run Python Test
+      - name: Run test
         run: python3 test_calc.py
+
 
